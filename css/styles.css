@@ -34,13 +34,15 @@ h1 {
 }
 
 #nav-list {
-  margin-top: 10px;
+  margin-top: 0;
   font-size: 1.5em;
 }
 #nav-list a {
   color: #FF4500;
   text-align: center;
   font-weight: 400;
+  background-color: #708090;
+  border-top:2px solid white;
 }
 #nav-list a:hover {
   background: #E7E7E7;
