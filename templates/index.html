@@ -24,7 +24,7 @@
     <nav id="header-nav" class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-              <h1>A Customer Quitting Predictor</h1>
+              <h1>Customer Quitting Predictor</h1>
             <span style="margin: 3%;">Using a telecom company dataset as an example</span>
         </div><!-- END navbar-header -->
       </div>  <!-- END conntainer -->
@@ -51,13 +51,13 @@
          <h2 id="probability2" class="caption-red text-center" style="color: green;"> {{proba}} % </h2>
          {% endif%}
          <p class="menutext content-text-center">
-             The customer is {{ answer}}:
+             The customer is {{ answer}}.
          </p>
 
 
          <form method="post">
              <div class="button text-center">
-             <button type="submit" class="btn btn-danger btn-lg" name = "submit" value="analysis"> See Explanations </button>
+             <button type="submit" class="btn btn-warning btn-md" name = "submit" value="analysis"> See Brief Explanations </button>
              </div>
          </form>
 

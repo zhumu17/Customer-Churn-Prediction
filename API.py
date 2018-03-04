@@ -20,6 +20,25 @@ def index():
     # session.pop('category')
     # session.pop('submitted')
 
+    if 'submitted' in session:
+        print("submitted in session:", session['submitted'])
+    else:
+        session['submitted'] = []
+    if 'proba' in session:
+        print("proba in session:",session['proba'])
+    else:
+        session['proba'] = []
+    if 'category' in session:
+        print("category in session:", session['category'])
+    else:
+        session['category'] = []
+    if 'answer' in session:
+        print("answer in session:", session['answer'])
+    else:
+        session['answer'] = []
+
+
+
     # model.predict()
     print(request.method)
     # session['proba'] = 0
@@ -76,11 +95,10 @@ def index():
         session['submitted'] = True
         if category == [1]:
             answer = 'likely to quit'
-            session['answer'] = answer
         else:
             answer = 'not likely to quit'
-            session['answer'] = answer
 
+        session['answer'] = answer
         session['proba'] = int(list(proba)[0][1] * 100)
         return redirect(url_for("index"))
 
