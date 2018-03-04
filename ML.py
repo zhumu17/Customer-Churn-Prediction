@@ -149,7 +149,7 @@ def visualizeROC(fpr, tpr):
 
 def storeModel(model, modelName):
     import pickle
-    pickle.dump(model, open("./Models/" + modelName + ".pkl", "wb"))
+    pickle.dump(model, open("./Models/" + modelName + ".pkl", "wb"), protocol=2 )
     print()
 
 
@@ -158,12 +158,12 @@ if __name__ == '__main__':
     df_features = cleanFeature(df)
     df = cleanLabel(df, df_features)
     X_train, X_test, y_train, y_test = dataProcess(df)
-    visualizeData(df)
+    # visualizeData(df)
     featureImportance(X_train, y_train, df)
     modelName = 'GB'
     model = MLmodel(modelName, X_train, y_train)
     MLcrossValidation(model, X_train, y_train)
     y_test_predict, y_test_score, y_test_proba = MLpredict(model, X_test)
     fpr, tpr, auc_score = MLevaluate(y_test, y_test_score)
-    visualizeROC(fpr, tpr)
+    # visualizeROC(fpr, tpr)
     storeModel(model, modelName)
