@@ -37,29 +37,51 @@
 
   <h1 id="title-menu" class="text-center"></h1>
      <div class="white-boxes" class="col-lg-12 col-md-6 col-sm-12 col-xs-12 container-fluid ">
-      <h2 id="graphs" class="caption-red text-center"> Explanations</h2>
-         <div class="content-text-center">
+      <h2 id="graphs" class="caption-red text-center"> Brief Explanations</h2>
+         <div style="color:black">
              The prediction is computed using the machine learning algorithm called XGBoosting.<br>
-             For this supervised learning problem, there are total over 7000 training examples.
-             All the input fields can be treated as features while the the result of whether the customer quits is the label.
-             The original dataset contains 7000
-         </div>
-         <div class="content-text-center">
-             <img class="hidden-xs" width="500" height="400" src="../static/figures/featureImportance.png" alt="image not found">
-             <span><p>ROC curve</p></span>
-         </div>
-         <div class="content-text-center">
-             <img class="hidden-xs" width="500" height="400" src="../static/figures/heatMapTenureMonthTotal.png" alt="image not found">
-             <span><p>Heat map of features</p></span>
-         </div>
-         <div class="content-text-center">
-             <img class="hidden-xs" width="500" height="400" src="../static/figures/CovTenureMonthTotal.png" alt="image not found">
-             <span><p>ROC curve</p></span>
+             For this supervised learning problem, there are total over 7000 training examples with labels.
+             Model performance is measured by Area Under the ROC curve (as shown in the plot below), in order to comprehensively consider precision and recall.
+             10 fold Cross validation was performed to ensure no overfitting, and the trained model achieved average AUC score of 0.846.
          </div>
          <div class="content-text-center">
              <img class="hidden-xs" width="500" height="400" src="../static/figures/roc.png" alt="image not found">
              <span><p>ROC curve</p></span>
          </div>
+         <div style="color:black">
+             Concretely, in this problem all the input fields are treated as potential features, while the outcome of whether the customer quits is the label.<br>
+             Each feature is not equally important on impacting the result.
+             Using Random Forest Classifier, we can visually rank the features' relative importance as shown below:
+         </div>
+         <div class="content-text-center">
+             <img class="hidden-xs" width="500" height="400" src="../static/figures/featureImportance.png" alt="image not found">
+             <span><p>Features Importances</p></span>
+         </div>
+         <div style="color:black">
+             From the plot we can see that 3 features are obviously more important than others.
+             The top 3 important features are: Total Charges (feature #3 on plot), Monthly Charges (feature #2 on plot) and length of membership (feature #1 on plot).
+             In addition, these three factors are also correlated as shown in the heat map below:
+         </div>
+
+         <div class="content-text-center">
+             <img class="hidden-xs" width="500" height="400" src="../static/figures/heatMapTenureMonthTotal.png" alt="image not found">
+             <span><p>Heat map of features</p></span>
+         </div>
+         <div style="color:black">
+             Intuitively it's not surprise to see that the charges to a customer, either total wise or monthly wise,
+             are the determining factor that impact customer's loyaty, especially when the competitor company have better offers. <br>
+             Interestingly, the length of customer's membership plays the next critical role next to price.
+             The longer a customer has been work with a company, the lower possibility this customer will quit. <br>
+             In another word, newly subscribed customer have higher potential to leave.
+             With this finding, some promotion offers may be provided especially targeting the newer customers...<br>
+         </div>
+         <div style="color:black">
+             <br>
+             <br>
+             Want to learn more about the model or the findings? Feel free to email zhumu17@gmail.com. <br>
+             <br>
+         </div>
+
 
 
 

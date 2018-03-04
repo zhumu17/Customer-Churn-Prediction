@@ -93,15 +93,15 @@ def featureImportance(X, y, df):
         print("%d. feature %d named %s (%f)" % (f + 1, indices[f], featureList[indices[f]], importances[indices[f]]))
 
     # Plot the feature importances of the forest
-    plt.figure()
-    plt.title("Feature importances")
-    indices = indices[:10] # top 10 important feature indices
-    plt.bar(range(10), importances[indices], color="r", yerr=std[indices], align="center")
-    plt.xticks(range(10), indices)
-    plt.xlim([-1, 10])
-    # plt.show()
-    plt.savefig('./static/figures/featureImportance.png', dpi=300)
-    plt.close()
+    # plt.figure()
+    # plt.title("Feature importances")
+    # indices = indices[:10] # top 10 important feature indices
+    # plt.bar(range(10), importances[indices], color="r", yerr=std[indices], align="center")
+    # plt.xticks(range(10), indices)
+    # plt.xlim([-1, 10])
+    # # plt.show()
+    # plt.savefig('./static/figures/featureImportance.png', dpi=300)
+    # plt.close()
 
 
 def MLmodel(modelName, X_train, y_train):
