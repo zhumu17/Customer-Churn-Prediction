@@ -149,7 +149,7 @@ def visualizeROC(fpr, tpr):
 
 def storeModel(model, modelName):
     import pickle
-    pickle.dump(model, open("./Models/" + modelName + ".pkl", "wb"), protocol=2 )
+    pickle.dump(model, open("./Models/" + modelName + ".pkl", "wb"))
     print()
 
 
