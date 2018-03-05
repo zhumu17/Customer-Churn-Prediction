@@ -39,33 +39,7 @@
 
   <h1 id="title-menu" class="text-center"></h1>
 
-       {% if submitted %}
-     <h1 id="title-menu2" class="text-center"></h1>
-     <div class="white-boxes" class="col-md-12 col-sm-12 col-xs-12" class="container-fluid">
-      <h2 id="" class="caption-red text-center"> Prediction Result</h2>
 
-         <p class="menutext content-text-center">
-             The probability of this the customer to quit is:
-         </p>
-         {% if proba > 50%}
-         <h2 id="probability" class="caption-red text-center" style="color: red;"> {{proba}} % </h2>
-         {% else %}
-         <h2 id="probability2" class="caption-red text-center" style="color: green;"> {{proba}} % </h2>
-         {% endif%}
-         <p class="menutext content-text-center">
-             The customer is {{ answer}}.
-         </p>
-
-
-         <form method="post">
-             <div class="button text-center">
-             <button type="submit" class="btn btn-warning btn-md" name = "submit" value="analysis"> See Brief Explanations </button>
-             </div>
-         </form>
-
-
-     </div>
-     {% endif %}
 
 
 
@@ -183,7 +157,33 @@
             </form>
      </div>
 
+        {% if submitted %}
+     <h1 id="predictionResult" class="text-center"></h1>
+     <div class="white-boxes" class="col-md-12 col-sm-12 col-xs-12" class="container-fluid">
+      <h2 id="" class="caption-red text-center"> Prediction Result</h2>
 
+         <p class="menutext content-text-center">
+             The probability of this the customer to quit is:
+         </p>
+         {% if proba > 50%}
+         <h2 id="probability" class="caption-red text-center" style="color: red;"> {{proba}} % </h2>
+         {% else %}
+         <h2 id="probability2" class="caption-red text-center" style="color: green;"> {{proba}} % </h2>
+         {% endif%}
+         <p class="menutext content-text-center">
+             The customer is {{ answer}}.
+         </p>
+
+
+         <form method="post">
+             <div class="button text-center">
+             <button type="submit" class="btn btn-warning btn-lg" name = "submit" value="analysis"> See Brief Explanations </button>
+             </div>
+         </form>
+
+
+     </div>
+     {% endif %}
 
 
 

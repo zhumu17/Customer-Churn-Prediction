@@ -100,7 +100,7 @@ def index():
 
         session['answer'] = answer
         session['proba'] = int(list(proba)[0][1] * 100)
-        return redirect(url_for("index"))
+        return redirect(url_for("index",_anchor = 'predictionResult'))
 
     if request.method == 'POST' and request.form['submit'] == 'analysis':
         return redirect(url_for("analysis"))
@@ -110,6 +110,7 @@ def index():
     session['submitted'] = False
     proba = session['proba']
     answer = session['answer']
+
     return render_template('index.html', submitted = submitted, proba = proba, answer = answer)
 
 
