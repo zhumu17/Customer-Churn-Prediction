@@ -44,16 +44,10 @@
 
 
 
- <div class="row ">
-
-  <h1 id="title-menu" class="text-center"></h1>
-
-
-
-
+ <div>
 
      <div class="white-boxes container-fluid " >
-      <h2  class="caption-red text-center" > BASIC INFORMATION OF THE CUSTOMER</h2>
+      <h2  class="caption-red text-center" > INFORMATION OF THE CUSTOMER</h2>
             <form method="post" >
                     <p class="content-text-center bold shades"><span class="question">What is the customer's gender?</span> <br>
                         <input type="radio" name="gender" value="male" checked> Male
@@ -87,7 +81,6 @@
                         <input type="radio" name="phoneService" value="Yes"> Yes
                         <input type="radio" name="phoneService" value="No" checked> No
                     </p>
-
                     <p class="content-text-center bold shades"><span class="question">Does he/she have multiple lines?</span> <br>
                         <input type="radio" name="multipleLines" value="Yes"> Yes
                         <input type="radio" name="multipleLines" value="No"> No
@@ -161,6 +154,7 @@
                         <input type="number" min="1" max="10000" name = "totalCharges" value="1" class="user-input">
                     </p>
                 <div class="button text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <br>
                      <button  type="submit" class="btn btn-success btn-lg" name="submit" value="predict"> Predict </button>
                 </div>
             </form>
@@ -171,16 +165,16 @@
      <div class="white-boxes container-fluid">
       <h2  id="predictionResult" class="caption-red text-center"> Prediction Result</h2>
 
-         <p class="menutext content-text-center">
-             The probability of this the customer to quit is:
+         <p class="menutext content-text-center ">
+             <span class="question">The probability of this the customer to quit is:</span> <br><br>
          </p>
          {% if proba > 50%}
          <h2 id="probability" class="caption-red text-center" style="color: red;"> {{proba}} % </h2>
          {% else %}
          <h2 id="probability2" class="caption-red text-center" style="color: green;"> {{proba}} % </h2>
          {% endif%}
-         <p class="menutext content-text-center">
-             The customer is {{ answer}}.
+         <p class="content-text-center question">
+             <span class="question">The customer is {{ answer}}.</span> <br><br>
          </p>
 
 
