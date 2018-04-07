@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115813592-1"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115813592-2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-115813592-1');
+      gtag('config', 'UA-115813592-2');
     </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,7 +44,7 @@
 
 
 
- <div class="row">
+ <div class="row ">
 
   <h1 id="title-menu" class="text-center"></h1>
 
@@ -52,30 +52,30 @@
 
 
 
-     <div class="white-boxes" class="col-md-12 col-sm-12 col-xs-12 container-fluid">
-      <h2 id="Chicken" class="caption-red text-center"> Question Form</h2>
+     <div class="white-boxes container-fluid ">
+      <h2 id="Chicken" class="caption-red text-center"> Please Fill The Form About Customer's Basic Info</h2>
             <form method="post">
-                    <p class="menutext content-text-center"><span>What is the customer's gender?</span>
+                    <p class="menutext content-text-center" ><span>What is the customer's gender?</span>
                         <input type="radio" name="gender" value="male" checked> Male
                         <input type="radio" name="gender" value="female"> Female
                     </p>
 
-                    <p class="menutext content-text-center"><span>Are you a senior citizen?</span>
+                    <p class="menutext content-text-center" ><span>Is the customer a senior citizen? </span>
                         <input type="radio" name="seniorCitizen" value="1" checked> Yes
                         <input type="radio" name="seniorCitizen" value="0"> No
                     </p>
 
-                    <p class="menutext content-text-center"><span>Does the customer have partner?</span>
+                    <p class="menutext content-text-center" ><span>Does the customer have partner?</span>
                         <input type="radio" name="partner" value="Yes" checked> Yes
                         <input type="radio" name="partner" value="No"> No
                     </p>
 
-                    <p class="menutext content-text-center"><span>Does the customer have Dependents?</span>
+                    <p class="menutext content-text-center" ><span>Does the customer have Dependents?</span>
                         <input type="radio" name="dependents" value="Yes" checked> Yes
                         <input type="radio" name="dependents" value="No"> No
                     </p>
 
-                    <p class="menutext content-text-center">How long have you been with us (in months)?
+                    <p class="menutext content-text-center" ><span>How long have you been with us (in months)?</span>
                         <select name="tenure" id="tenure" class="text-dropdown">
                              {% for i in range(0, 100) %}
                                 <option value="{{i}}">{{i}}</option>
@@ -88,45 +88,45 @@
                         <input type="radio" name="phoneService" value="No" checked> No
                     </p>
 
-                    <p class="menutext content-text-center"><span>Does the customer have multiple lines?</span>
+                    <p class="menutext content-text-center"><span>Does the customer have multiple lines?</span> <br>
                         <input type="radio" name="multipleLines" value="Yes"> Yes
                         <input type="radio" name="multipleLines" value="No"> No
                         <input type="radio" name="multipleLines" value="No phone service" checked> No Phone Service
                     </p>
 
-                    <p class="menutext content-text-center"><span>What's the customer's Internet Service?</span>
+                    <p class="menutext content-text-center"><span>What's the customer's Internet Service?</span> <br>
                         <input type="radio" name="internetService" value="DSL"> DSL
                         <input type="radio" name="internetService" value="Fiber optic"> Fiber optic
                         <input type="radio" name="internetService" value="No" checked> No Internet Service
                     </p>
 
-                    <p class="menutext content-text-center"><span>Does the customer have online security?</span>
+                    <p class="menutext content-text-center"><span>Does the customer have online security?</span> <br>
                         <input type="radio" name="onlineSecurity" value="Yes"> Yes
                         <input type="radio" name="onlineSecurity" value="No"> No
                         <input type="radio" name="onlineSecurity" value="No Internet Service" checked> No Internet Service
                     </p>
 
-                    <p class="menutext content-text-center"><span>Does the customer have online backup?</span>
+                    <p class="menutext content-text-center"><span>Does the customer have online backup?</span> <br>
                         <input type="radio" name="onlineBackup" value="Yes"> Yes
                         <input type="radio" name="onlineBackup" value="No"> No
                         <input type="radio" name="onlineBackup" value="No Internet Service"  checked> No Internet Service
                     </p>
-                    <p class="menutext content-text-center"><span>Does the customer have device protection?</span>
+                    <p class="menutext content-text-center"><span>Does the customer have device protection?</span> <br>
                         <input type="radio" name="deviceProtection" value="Yes"> Yes
                         <input type="radio" name="deviceProtection" value="No"> No
                         <input type="radio" name="deviceProtection" value="No Internet Service" checked> No Internet Service
                     </p>
-                    <p class="menutext content-text-center"><span>Does the customer have techSupport?</span>
+                    <p class="menutext content-text-center"><span>Does the customer have techSupport?</span> <br>
                         <input type="radio" name="techSupport" value="Yes"> Yes
                         <input type="radio" name="techSupport" value="No"> No
                         <input type="radio" name="techSupport" value="No Internet Service" checked> No Internet Service
                     </p>
-                    <p class="menutext content-text-center"><span>Does the customer have streaming TV?</span>
+                    <p class="menutext content-text-center"><span>Does the customer have streaming TV?</span> <br>
                         <input type="radio" name="streamingTV" value="Yes"> Yes
                         <input type="radio" name="streamingTV" value="No"> No
                         <input type="radio" name="streamingTV" value="No Internet Service" checked> No Internet Service
                     </p>
-                    <p class="menutext content-text-center"><span>Does the customer have streaming movie?</span>
+                    <p class="menutext content-text-center"><span>Does the customer have streaming movie?</span> <br>
                         <input type="radio" name="streamingMovie" value="Yes"> Yes
                         <input type="radio" name="streamingMovie" value="No"> No
                         <input type="radio" name="streamingMovie" value="No Internet Service" checked> No Internet Service
@@ -140,7 +140,7 @@
                         </select>
                     </p>
 
-                    <p class="menutext content-text-center">Is it paperless billing?
+                    <p class="menutext content-text-center"><span> Is it paperless billing? </span>
                         <input type="radio" name="paperlessBilling" value="Yes" checked> Yes
                         <input type="radio" name="paperlessBilling" value="No"> No
                     </p>
@@ -160,8 +160,8 @@
                      <p class="menutext content-text-center"> What's the total charges?
                         <input type="number" min="1" max="10000" name = "totalCharges" value="1" class="user-input">
                     </p>
-                    <div class="button content-text-center">
-                     <button  type="submit" class="btn btn-warning btn-lg" name="submit" value="predict"> Predict </button>
+                    <div class="button content-text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                     <button  type="submit" class="btn btn-success btn-lg" name="submit" value="predict"> Predict </button>
                     </div>
             </form>
      </div>
@@ -186,7 +186,7 @@
 
          <form method="post">
              <div class="button text-center">
-             <button type="submit" class="btn btn-warning btn-lg" name = "submit" value="analysis"> See Brief Explanations </button>
+             <button type="submit" class="btn btn-success btn-lg" name = "submit" value="analysis"> See Brief Explanations </button>
              </div>
          </form>
 
