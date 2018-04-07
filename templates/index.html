@@ -52,30 +52,30 @@
 
 
 
-     <div class="white-boxes container-fluid ">
-      <h2 id="Chicken" class="caption-red text-center"> Please Fill The Form About Customer's Basic Info</h2>
-            <form method="post">
-                    <p class="menutext content-text-center" ><span>What is the customer's gender?</span>
+     <div class="white-boxes container-fluid " >
+      <h2 id="Chicken" class="caption-red text-center" > BASIC INFORMATION OF THE CUSTOMER</h2>
+            <form method="post" >
+                    <p class="content-text-center bold shades"><span class="question">What is the customer's gender?</span> <br>
                         <input type="radio" name="gender" value="male" checked> Male
-                        <input type="radio" name="gender" value="female"> Female
+                        <input type="radio" name="gender" value="female" > Female
                     </p>
 
-                    <p class="menutext content-text-center" ><span>Is the customer a senior citizen? </span>
+                    <p class="content-text-center bold shades2" ><span class="question">Is he/she a senior citizen? </span> <br>
                         <input type="radio" name="seniorCitizen" value="1" checked> Yes
                         <input type="radio" name="seniorCitizen" value="0"> No
                     </p>
 
-                    <p class="menutext content-text-center" ><span>Does the customer have partner?</span>
+                    <p class="content-text-center bold shades" ><span class="question">Does he/she have partner?</span> <br>
                         <input type="radio" name="partner" value="Yes" checked> Yes
                         <input type="radio" name="partner" value="No"> No
                     </p>
 
-                    <p class="menutext content-text-center" ><span>Does the customer have Dependents?</span>
+                    <p class="content-text-center bold shades2" ><span class="question">Does he/she have Dependents?</span> <br>
                         <input type="radio" name="dependents" value="Yes" checked> Yes
                         <input type="radio" name="dependents" value="No"> No
                     </p>
 
-                    <p class="menutext content-text-center" ><span>How long have you been with us (in months)?</span>
+                    <p class="content-text-center bold shades" ><span class="question">How long has he/she been with us (in months)?</span> <br>
                         <select name="tenure" id="tenure" class="text-dropdown">
                              {% for i in range(0, 100) %}
                                 <option value="{{i}}">{{i}}</option>
@@ -83,56 +83,56 @@
                         </select>
                     </p>
 
-                    <p class="menutext content-text-center"><span>Does the customer have Phone Service?</span>
+                    <p class="content-text-center bold shades2"><span class="question">Does he/she have Phone Service?</span> <br>
                         <input type="radio" name="phoneService" value="Yes"> Yes
                         <input type="radio" name="phoneService" value="No" checked> No
                     </p>
 
-                    <p class="menutext content-text-center"><span>Does the customer have multiple lines?</span> <br>
+                    <p class="content-text-center bold shades"><span class="question">Does he/she have multiple lines?</span> <br>
                         <input type="radio" name="multipleLines" value="Yes"> Yes
                         <input type="radio" name="multipleLines" value="No"> No
                         <input type="radio" name="multipleLines" value="No phone service" checked> No Phone Service
                     </p>
 
-                    <p class="menutext content-text-center"><span>What's the customer's Internet Service?</span> <br>
+                    <p class="content-text-center bold shades2"><span class="question">What's his/her Internet Service?</span> <br>
                         <input type="radio" name="internetService" value="DSL"> DSL
                         <input type="radio" name="internetService" value="Fiber optic"> Fiber optic
                         <input type="radio" name="internetService" value="No" checked> No Internet Service
                     </p>
 
-                    <p class="menutext content-text-center"><span>Does the customer have online security?</span> <br>
+                    <p class="content-text-center bold shades"><span class="question">Does he/she have online security?</span> <br>
                         <input type="radio" name="onlineSecurity" value="Yes"> Yes
                         <input type="radio" name="onlineSecurity" value="No"> No
                         <input type="radio" name="onlineSecurity" value="No Internet Service" checked> No Internet Service
                     </p>
 
-                    <p class="menutext content-text-center"><span>Does the customer have online backup?</span> <br>
+                    <p class="content-text-center bold shades2"><span class="question">Does he/she have online backup?</span> <br>
                         <input type="radio" name="onlineBackup" value="Yes"> Yes
                         <input type="radio" name="onlineBackup" value="No"> No
                         <input type="radio" name="onlineBackup" value="No Internet Service"  checked> No Internet Service
                     </p>
-                    <p class="menutext content-text-center"><span>Does the customer have device protection?</span> <br>
+                    <p class="content-text-center bold shades"><span class="question">Does he/she have device protection?</span> <br>
                         <input type="radio" name="deviceProtection" value="Yes"> Yes
                         <input type="radio" name="deviceProtection" value="No"> No
                         <input type="radio" name="deviceProtection" value="No Internet Service" checked> No Internet Service
                     </p>
-                    <p class="menutext content-text-center"><span>Does the customer have techSupport?</span> <br>
+                    <p class="content-text-center bold shades2"><span class="question">Does he/she have techSupport?</span> <br>
                         <input type="radio" name="techSupport" value="Yes"> Yes
                         <input type="radio" name="techSupport" value="No"> No
                         <input type="radio" name="techSupport" value="No Internet Service" checked> No Internet Service
                     </p>
-                    <p class="menutext content-text-center"><span>Does the customer have streaming TV?</span> <br>
+                    <p class="content-text-center bold shades"><span class="question">Does he/she have streaming TV?</span> <br>
                         <input type="radio" name="streamingTV" value="Yes"> Yes
                         <input type="radio" name="streamingTV" value="No"> No
                         <input type="radio" name="streamingTV" value="No Internet Service" checked> No Internet Service
                     </p>
-                    <p class="menutext content-text-center"><span>Does the customer have streaming movie?</span> <br>
+                    <p class="content-text-center bold shades2"><span class="question">Does he/she have streaming movie?</span> <br>
                         <input type="radio" name="streamingMovie" value="Yes"> Yes
                         <input type="radio" name="streamingMovie" value="No"> No
                         <input type="radio" name="streamingMovie" value="No Internet Service" checked> No Internet Service
                     </p>
 
-                    <p class="menutext content-text-center">What's the customer's contract type?
+                <p class="content-text-center bold shades"><span class="question">What's his/her contract type? </span><br>
                         <select name="contract" id="contract" class="text-dropdown">
                             <option value="Month-to-month">month to month</option>
                             <option value="oneYear">One year</option>
@@ -140,12 +140,12 @@
                         </select>
                     </p>
 
-                    <p class="menutext content-text-center"><span> Is it paperless billing? </span>
+                    <p class="content-text-center bold shades2"><span class="question"> Is it paperless billing? </span> <br>
                         <input type="radio" name="paperlessBilling" value="Yes" checked> Yes
                         <input type="radio" name="paperlessBilling" value="No"> No
                     </p>
 
-                    <p class="menutext content-text-center">What's the payment method?
+                    <p class="content-text-center bold shades"><span class="question">What's the payment method? </span><br>
                         <select name="paymentMethod" id="paymentMethod" class="text-dropdown">
                             <option value="Electronic check">electronic check</option>
                             <option value="Mailed check">mailed check</option>
@@ -154,15 +154,15 @@
 
                         </select>
                     </p>
-                    <p class="menutext content-text-center"> What's the monthly charges?
+                <p class="content-text-center bold shades2"> <span class="question">What's the monthly charges? </span><br>
                         <input type="number" min="1" max="1000" name = "monthlyCharges" value="1" class="user-input">
                     </p>
-                     <p class="menutext content-text-center"> What's the total charges?
+                <p class="content-text-center bold shades"> <span class="question">What's the total charges? </span><br>
                         <input type="number" min="1" max="10000" name = "totalCharges" value="1" class="user-input">
                     </p>
-                    <div class="button content-text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="button text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
                      <button  type="submit" class="btn btn-success btn-lg" name="submit" value="predict"> Predict </button>
-                    </div>
+                </div>
             </form>
      </div>
 

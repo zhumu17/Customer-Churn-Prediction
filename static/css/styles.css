@@ -80,7 +80,7 @@ h1 {
 
 
 .white-boxes {
-  background-color: #D3D3D3;
+  background-color: #C0C0C0;
   padding: 2%;
   margin: 8%;
   margin-top: 3%;
@@ -104,8 +104,21 @@ h2 {
 }
 
 
+.shades {
+  background-color: #E0E0E0;
+}
+.shades2 {
+  background-color: #E0E0E0;
+}
 
+p.bold {
+  font-weight: ;
+}
 
+.question {
+  font-size:20px;
+  color:#00008B;
+}
 
 #art-menu {
   margin: 5%;
@@ -119,10 +132,22 @@ h2 {
 
 .content-text-center {
   color:#000000;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 300;
   text-align: center;
-  margin: 2%;
+  margin: 1%;
+  margin-left:20%;
+  margin-right:20%;
+}
+@media (max-width:750px){
+.content-text-center {
+  color:#000000;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  margin: 3%;
+}
+
 }
 
 /* END HOME PAGE */
