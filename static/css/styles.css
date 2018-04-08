@@ -87,7 +87,7 @@ h1 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2.4em;
   color: #FF4500;
   font-weight: 700;
   vertical-align: center;
@@ -97,7 +97,8 @@ h1 {
 
 h2 {
   font-size: 2em;
-  font-weight: 400;
+  font-weight: bold;
+  color:#708090;
   z-index: 10;
   border: 0px;
   margin-bottom: 4%
@@ -112,7 +113,7 @@ h2 {
 }
 
 p.bold {
-  font-weight: ;
+  font-weight: normal;
 }
 
 .question {
@@ -131,7 +132,7 @@ p.bold {
 .content-text-center {
   color:#000000;
   font-size: 1em;
-  font-weight: 300;
+  font-weight: normal;
   text-align: center;
   margin: 0%;
   margin-left:10%;
@@ -141,7 +142,7 @@ p.bold {
 .content-text-center {
   color:#000000;
   font-size: 1em;
-  font-weight: 300;
+  font-weight: normal;
   text-align: center;
   margin: 0%;
   margin-left:1%;

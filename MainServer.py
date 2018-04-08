@@ -103,9 +103,9 @@ def index():
 
         session['submitted'] = True
         if category == [1]:
-            answer = 'likely to quit'
+            answer = 'likely to churn'
         else:
-            answer = 'not likely to quit'
+            answer = 'not likely to churn'
 
         session['answer'] = answer
         session['proba'] = int(list(proba)[0][1] * 100)
@@ -136,4 +136,4 @@ def analysis():
 
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(debug = False)
