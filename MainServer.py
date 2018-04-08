@@ -19,7 +19,10 @@ def index():
     # session.pop('proba')
     # session.pop('category')
     # session.pop('submitted')
-
+    if 'started' in session:
+        print("started in session:", session['started'])
+    else:
+        session['started'] = []
     if 'submitted' in session:
         print("submitted in session:", session['submitted'])
     else:
@@ -41,8 +44,14 @@ def index():
 
     # model.predict()
     print(request.method)
+    print(request.method)
     # session['proba'] = 0
     # session['answer'] = 'TBD'
+
+    if request.method == 'POST' and request.form['submit'] == 'start':
+        session['started'] = True
+        return redirect(url_for("index", _anchor='survey'))
+
     if request.method == 'POST' and request.form['submit'] == 'predict':
         gender = request.form['gender']
         seniorCitizen = request.form['seniorCitizen']
@@ -100,18 +109,19 @@ def index():
 
         session['answer'] = answer
         session['proba'] = int(list(proba)[0][1] * 100)
-        return redirect(url_for("index",_anchor = 'predictionResult'))
+        return redirect(url_for("index", _anchor = 'predictionResult'))
 
     if request.method == 'POST' and request.form['submit'] == 'analysis':
         return redirect(url_for("analysis"))
 
-
+    started = session['started']
+    print(started)
     submitted = session['submitted']
     session['submitted'] = False
     proba = session['proba']
     answer = session['answer']
 
-    return render_template('index.html', submitted = submitted, proba = proba, answer = answer)
+    return render_template('index.html', started = started, submitted = submitted, proba = proba, answer = answer)
 
 
 @app.route("/analysis", methods = ['GET', 'POST'])
@@ -126,4 +136,4 @@ def analysis():
 
 
 if __name__ == "__main__":
-    app.run(debug = False)
+    app.run(debug = True)

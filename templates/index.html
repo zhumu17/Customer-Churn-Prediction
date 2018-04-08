@@ -45,8 +45,20 @@
 
 
  <div>
-
-     <div class="white-boxes container-fluid " >
+     <div id="introduction" class="white-boxes container-fluid " >
+      <h2  class="caption-red text-center" > INTRODUCTION</h2>
+         <p class="content-text-center bold"><span> This application is to predict the customer churning probability. <br>
+             Customer churning means a customer quiting or canceling from the current subscription with the company. <br>
+             In order to maintain long term relation with the customer, online business is interested in predicting the high risk customer.
+             <br> <br> </span></p>
+         <form method="post" >
+         <div class="button text-center">
+         <button  type="submit" class="btn btn-success btn-lg" name="submit" value="start"> Start </button>
+         </div>
+         </form>
+     </div>
+     {% if started %}
+     <div id="survey" class="white-boxes container-fluid " >
       <h2  class="caption-red text-center" > INFORMATION OF THE CUSTOMER</h2>
             <form method="post" >
                     <p class="content-text-center bold shades"><span class="question">What is the customer's gender?</span> <br>
@@ -160,32 +172,33 @@
             </form>
      </div>
 
-        {% if submitted %}
+         {% if submitted %}
 
-     <div class="white-boxes container-fluid">
-      <h2  id="predictionResult" class="caption-red text-center"> Prediction Result</h2>
+         <div class="white-boxes container-fluid">
+          <h2  id="predictionResult" class="caption-red text-center"> Prediction Result</h2>
 
-         <p class="menutext content-text-center ">
-             <span class="question">The probability of this the customer to quit is:</span> <br><br>
-         </p>
-         {% if proba > 50%}
-         <h2 id="probability" class="caption-red text-center" style="color: red;"> {{proba}} % </h2>
-         {% else %}
-         <h2 id="probability2" class="caption-red text-center" style="color: green;"> {{proba}} % </h2>
-         {% endif%}
-         <p class="content-text-center question">
-             <span class="question">The customer is {{ answer}}.</span> <br><br>
-         </p>
-
-
-         <form method="post">
-             <div class="button text-center">
-             <button type="submit" class="btn btn-success btn-lg" name = "submit" value="analysis"> See Brief Explanations </button>
-             </div>
-         </form>
+             <p class="content-text-center ">
+                 <span class="question">The probability of this the customer to quit is:</span> <br><br>
+             </p>
+             {% if proba > 50%}
+             <h2 id="probability" class="caption-red text-center" style="color: red;"> {{proba}} % </h2>
+             {% else %}
+             <h2 id="probability2" class="caption-red text-center" style="color: green;"> {{proba}} % </h2>
+             {% endif%}
+             <p class="content-text-center question">
+                 <span class="question">The customer is {{ answer}}.</span> <br><br>
+             </p>
 
 
-     </div>
+             <form method="post">
+                 <div class="button text-center">
+                 <button type="submit" class="btn btn-success btn-lg" name = "submit" value="analysis"> See Brief Explanations </button>
+                 </div>
+             </form>
+
+
+         </div>
+         {% endif %}
      {% endif %}
 
 
