@@ -185,12 +185,12 @@
              {% if proba > 50%}
              <p id="probability" class="text-center" style="color:red; font-size:60px;"> {{proba}} % </p>
              <p class="content-text-center question">
-                 <span  style="color:red;">The customer is {{ answer}}.</span> <br><br>
+                 <span  style="color:red;">You are likely to lose this customer!</span> <br><br>
              </p>
              {% else %}
              <p id="probability2" class="text-center" style="color:green; font-size:60px;"> {{proba}} % </p>
              <p class="content-text-center question">
-                 <span >The customer is {{ answer}}.</span> <br><br>
+                 <span >You are likely to keep this customer.</span> <br><br>
              </p>
              {% endif%}
 
@@ -198,7 +198,7 @@
 
              <form method="post">
                  <div class="button text-center">
-                 <button type="submit" class="btn btn-success btn-lg" name = "submit" value="analysis"> See Brief Explanations </button>
+                 <button type="submit" class="btn btn-success btn-lg" name = "submit" value="analysis"> Why? </button>
                  </div>
              </form>
 
