@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 # import seaborn as sns
 from sklearn.model_selection import train_test_split, GridSearchCV, cross_val_score
 from sklearn.linear_model import LogisticRegression
@@ -143,7 +143,10 @@ def MLevaluate(y_test, y_test_score):
 
 def visualizeROC(fpr, tpr):
     plt.plot(fpr, tpr)
-    # plt.show()
+    plt.title("ROC Curve")
+    plt.xlabel("False Positive Rate")
+    plt.ylabel("True Positive Rate")
+    plt.show()
     plt.savefig('./static/figures/roc.png', dpi=300)
     plt.close()
 
@@ -165,5 +168,5 @@ if __name__ == '__main__':
     MLcrossValidation(model, X_train, y_train)
     y_test_predict, y_test_score, y_test_proba = MLpredict(model, X_test)
     fpr, tpr, auc_score = MLevaluate(y_test, y_test_score)
-    # visualizeROC(fpr, tpr)
+    visualizeROC(fpr, tpr)
     storeModel(model, modelName)
